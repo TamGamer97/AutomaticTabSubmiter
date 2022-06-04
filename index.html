@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ='https://cdn.jsdelivr.net/npm/tesseract-js@0.0.1/lib/tesseract.min.js'> </script>
+</head>
+<body>
+    <img id="img" src="https://v2.gcchmc.org/captcha/image/68b82dc85ec6df642ca73f334263e2b91a415453/" alt="">
+
+    <div id = "GFG"></div>
+</body>
+<script>
+    let progress = document.querySelector('#GFG');
+         
+         Tesseract.recognize('https://i.ibb.co/L97ShyB/download.jpg')
+          
+         .progress(function(p) {
+             progress.innerHTML += JSON.stringify(p) + "<br>"
+         })
+          
+         .then(function(result) {
+             var captcha = result.text;
+             alert(captcha)
+         })
+</script>
+</html>
