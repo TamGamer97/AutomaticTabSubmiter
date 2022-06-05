@@ -15,9 +15,12 @@ async function mainFunc()
                 console.log(popup)
                 console.log('Found Popup')
                 // alert("Found Popup")
-                if(document.getElementsByClassName('field_value')[0].innerHTML == "Al Mubasher Medical Diagnostic Services")
+                if(document.getElementsByClassName('field_value')[17].innerHTML == "Al Mubasher Medical Diagnostic Services")
                 {
                     submitTabs()
+                }else{
+                    console.log('field value is not the value')
+                    console.log(document.getElementsByClassName('field_value'))
                 }
                 return
             }

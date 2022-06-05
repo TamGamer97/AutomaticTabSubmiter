@@ -4,17 +4,7 @@ async function bookApointment()
 
     const btnClass = 'ui primary large submit right floated button'
 
-    if(document.getElementById('id_country').value)
-    {
-        if(document.getElementById('id_city').value)
-        {
-            if(document.getElementById('id_traveled_country').value)
-            {
-                document.getElementsByClassName(btnClass)[0].click()
-                console.log('clciked')
-            }
-        }
-    }
+    document.getElementsByClassName(btnClass)[0].click()
 
     submitTabs()
 }
