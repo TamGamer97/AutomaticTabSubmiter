@@ -15,7 +15,10 @@ async function mainFunc()
                 console.log(popup)
                 console.log('Found Popup')
                 // alert("Found Popup")
-                submitTabs()
+                if(document.getElementsByClassName('field_value')[0].innerHTML == "Al Mubasher Medical Diagnostic Services")
+                {
+                    submitTabs()
+                }
                 return
             }
         }catch{
